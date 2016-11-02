@@ -1,3 +1,5 @@
+Mathematica Software for the Numerical Generation of Given Distribution with an Exponential Autocorrelation Function
+
 This file includes supplementary downloadable material, provided by the authors of the paper:
 D. Bykhovsky, "On the Numerical Generation of Positive-Axis-Defined Distributions with Exponential Autocorrelation Function"
 
