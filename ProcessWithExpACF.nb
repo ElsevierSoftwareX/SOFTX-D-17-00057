@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6365,        182]
-NotebookOptionsPosition[      6064,        167]
-NotebookOutlinePosition[      6439,        183]
-CellTagsIndexPosition[      6396,        180]
+NotebookDataLength[      6602,        186]
+NotebookOptionsPosition[      6243,        170]
+NotebookOutlinePosition[      6614,        186]
+CellTagsIndexPosition[      6571,        183]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -99,8 +99,9 @@ FontSlant->\"Italic\"]\)\>\""}], ";"}], " "}], "\[IndentingNewLine]",
             RowBox[{"x", "-", "m"}], ")"}], "p"}], ",", 
           RowBox[{"{", 
            RowBox[{"x", ",", 
-            RowBox[{"-", "Infinity"}], ",", "x"}], "}"}]}], "]"}]}], "]"}]}], 
-     ";", 
+            RowBox[{"-", "Infinity"}], ",", "x"}], "}"}], ",", 
+          RowBox[{"Assumptions", "\[Rule]", 
+           RowBox[{"x", "\[Element]", "Reals"}]}]}], "]"}]}], "]"}]}], ";", 
      RowBox[{"(*", 
       RowBox[{
        SuperscriptBox["g", "2"], "[", "x", "]"}], "*)"}], 
@@ -163,12 +164,14 @@ FontSlant->\"Italic\"]\)\>\""}], ";"}], " "}], "\[IndentingNewLine]",
    3.6869875921817293`*^9}, {3.6869876285928297`*^9, 3.686987628686431*^9}, {
    3.6869877767488785`*^9, 3.6869877845646286`*^9}, {3.68698865100282*^9, 
    3.686988651408428*^9}, {3.6892663273217363`*^9, 3.6892663305041566`*^9}, {
-   3.689266384199701*^9, 3.6892664868015585`*^9}}]
+   3.689266384199701*^9, 3.6892664868015585`*^9}, 
+   3.705807530610942*^9},ExpressionUUID->"1d8287d9-afb8-4157-a684-\
+507c933b0e9d"]
 },
 WindowSize->{942, 962},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 Magnification:>1.4 Inherited,
-FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -182,7 +185,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5502, 145, 698, "Input",
+Cell[558, 20, 5681, 148, 773, "Input", "ExpressionUUID" -> \
+"1d8287d9-afb8-4157-a684-507c933b0e9d",
  InitializationCell->True]
 }
 ]

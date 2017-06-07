@@ -1,0 +1,147 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5184,        139]
+NotebookOptionsPosition[      4603,        118]
+NotebookOutlinePosition[      4981,        134]
+CellTagsIndexPosition[      4938,        131]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Generate Random Process", "Section",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{
+  3.6901231722382197`*^9, {3.6901232436666975`*^9, 3.690123262948027*^9}, {
+   3.6901235005314546`*^9, 3.6901235095727167`*^9}, 3.690123541856733*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<ProcessWithExpACF`\>\"", "]"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"load", " ", "the", " ", "function"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Lambda]", "=", "50"}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "correlation", " ", "time", " ", "of", " ", "the", " ", "ACF", " ", "of", 
+     " ", "the", " ", "form", " ", 
+     SubscriptBox["C", "x"], 
+     RowBox[{"(", "\[Tau]", ")"}]}], "=", 
+    RowBox[{"Exp", "[", 
+     RowBox[{"-", "\[Lambda]\[Tau]"}], "]"}]}], " ", "*)"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalDelta]t", "=", 
+    RowBox[{"1", "/", "10000"}]}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"sampling", " ", "time"}], ",", " ", "\[CapitalDelta]t"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"length", " ", "=", " ", 
+    SuperscriptBox["10", "6"]}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "the", " ", "length", " ", "of", " ", "the", " ", "resulting", " ", 
+    "vector"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"x0", "=", "1"}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"the", " ", "initial", " ", "value", " ", "for", " ", "x", 
+     RowBox[{"(", 
+      RowBox[{"t", "=", "0"}], ")"}]}], "=", 
+    SubscriptBox["x", "0"]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[ScriptCapitalD]", "=", 
+   RowBox[{"LaplaceDistribution", "[", 
+    RowBox[{"2", ",", "1"}], "]"}]}], ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "define", " ", "distribution", " ", "with", " ", "the", " ", "required", 
+    " ", "parameters"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"vals", "=", 
+   RowBox[{"RandomVariateExpACF", "[", 
+    RowBox[{
+    "\[ScriptCapitalD]", ",", "length", ",", "\[CapitalDelta]t", ",", 
+     "\[Lambda]", ",", "x0"}], "]"}]}], ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"the", " ", "resulting", " ", "vector"}], ",", 
+    RowBox[{"x", 
+     RowBox[{"(", "t", ")"}]}]}], " ", "*)"}]}]}], "Input",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.},
+ CellChangeTimes->{{3.662625141658852*^9, 3.662625232033852*^9}, {
+   3.662625313895852*^9, 3.662625314046852*^9}, {3.662625357564852*^9, 
+   3.662625375380852*^9}, {3.6626274363278456`*^9, 3.6626274386078453`*^9}, {
+   3.6626276560988455`*^9, 3.6626276567058454`*^9}, {3.662637770939801*^9, 
+   3.6626377710118012`*^9}, {3.6626378463598013`*^9, 3.662637846502801*^9}, {
+   3.662637949284692*^9, 3.6626379495157146`*^9}, {3.662912551035884*^9, 
+   3.662912553124093*^9}, {3.673512118324789*^9, 3.673512149677124*^9}, {
+   3.6868083974357624`*^9, 3.686808401819643*^9}, {3.6868984342556586`*^9, 
+   3.68689854121163*^9}, {3.6868987157093897`*^9, 3.6868987793646355`*^9}, {
+   3.686898890344948*^9, 3.686898965080125*^9}, {3.6868990249533043`*^9, 
+   3.6868990250625057`*^9}, {3.686984119818241*^9, 3.686984156150874*^9}, 
+   3.6888988226628895`*^9, {3.6888988728459077`*^9, 3.688898886702293*^9}, {
+   3.6889099429993114`*^9, 3.6889099431093135`*^9}, {3.6889114741223936`*^9, 
+   3.6889114745279074`*^9}, 3.6892672881653852`*^9, 3.690123541856733*^9, {
+   3.6901239894761744`*^9, 3.690124011926001*^9}, {3.690124046091326*^9, 
+   3.6901240466695113`*^9}, {3.6905320591972556`*^9, 
+   3.6905320631440554`*^9}, {3.7056523900271664`*^9, 
+   3.7056526397535625`*^9}, {3.7056548422922173`*^9, 3.705654844102829*^9}, {
+   3.705656133886306*^9, 
+   3.705656163635315*^9}},ExpressionUUID->"d2995c1f-dcf9-4186-8615-\
+4c43979359c6"]
+}, Open  ]]
+},
+WindowSize->{1210, 1010},
+WindowMargins->{{-1920, Automatic}, {Automatic, 0}},
+Magnification:>1.15 Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 268, 4, 81, "Section", "ExpressionUUID" -> \
+"ef0305f4-1bb2-46fa-8343-09f3add302d5",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}],
+Cell[851, 28, 3736, 87, 221, "Input", "ExpressionUUID" -> \
+"d2995c1f-dcf9-4186-8615-4c43979359c6",
+ CellGroupingRules->{"GroupTogetherGrouping", 10001.}]
+}, Open  ]]
+}
+]
+*)
+

@@ -39,7 +39,7 @@ Begin["`Private`"];
 RandomVariateExpACF[dist_,n_,\[CapitalDelta]t_,\[Lambda]_,x0_]:=Module[{vals},
 $Assumptions=x\[Element]Reals&&\[Lambda]>0&&\[Lambda]\[Element]Reals;
 p=PDF[dist,x];
-m=Mean[dist];K2=FullSimplify[-2 \[Lambda]/p  Integrate[(x-m)p,{x,-Infinity,x}]];(*(g^2)[x]*)
+m=Mean[dist];K2=FullSimplify[-2 \[Lambda]/p  Integrate[(x-m)p,{x,-Infinity,x},Assumptions->x\[Element]Reals]];(*(g^2)[x]*)
 g[x_]=Sqrt[K2];
 gg[x_]=FullSimplify[Sqrt[K2] D[Sqrt[K2],x]];
 rnd=RandomVariate[NormalDistribution[],n-1];
